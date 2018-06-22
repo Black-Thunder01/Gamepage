@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>G.A.M.E</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="gamestyle.css">
+</head>
+<body>
+  <div class="container">
+      <div class="head icon-bar">
+          <a class="logo"><img src="yepi.png"></a>
+          <a class="menu" href="#"><i class="fa fa-bars"> Menu</i></a>
+      </div>
+    <div class="adv1">
+      <img src="banner2.jpg">
+    </div>
+    <div class="text1">
+
+    </div>
+    <div class="main">
+          <canvas class="myCanvas" style="border: 4px solid white" id="myCanvas">
+          </canvas>
+          <button class="canvasbtn"><span class="play">Play</span> G.A.M.E</button>
+    </div>
+    <div class="adv2">
+      <img src="afew.jpg">
+    </div>
+    <div class="footer">
+      <h3>Footer</h3>
+    </div>
+  </div>
+  <script>
+      // Add the javascript code for the canvas
+      var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.moveTo(0, 0);
+  ctx.lineTo(970, 700);
+  ctx.stroke();
+  ctx.moveTo(0,700);
+  ctx.lineTo(970, 0);
+  ctx.stroke();
+
+  </script>
+</body>
+</html>

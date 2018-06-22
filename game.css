@@ -1,0 +1,187 @@
+body{
+    width: 100%;
+    text-align: center;
+    background-image: url("back.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, minmax(30px, auto));
+    grid-gap: 5px;
+    grid-template-areas:
+    "one one one one "
+    "two two two two "
+    "header header header header"
+    "three three three three"
+    "four four four four"
+    "five five five five"
+    "six six six six";
+    height:100%;
+}
+
+*{
+
+}
+.container div{
+    background: #bbb;
+    width: 100%;
+}
+.one{
+    grid-area: one;
+}
+.two{
+    grid-area:two;
+    background: transparent;
+}
+.two img{
+    width: 100%;
+}
+.three{
+    grid-area: three;
+    background-color: #92B8FF !important;
+
+}
+.four{
+    grid-area: four;
+    background: #92B8FF !important;
+    position: relative;
+}
+.five{
+    grid-area: five;
+}
+.five img{
+    width: 100%;
+}
+.six{
+    grid-area: six;
+    background: #555 !important;
+    color: white;
+}
+.header{
+  grid-area: header;
+  background: #5086c1 !important;
+}
+.header h1{
+  color: white;
+  font-size: 60px;
+  font-family: "Eater";
+}
+.header h2{
+  color: white;
+  font-size: 30px;
+  font-family: "Eater";
+}
+.icon-bar {
+    width: 100%;
+    background-color: #555 !important;
+}
+.icon-bar a {
+    float: right;
+    width: 30%;
+    height: 90px;
+    padding: 12px 0;
+    transition: all 0.9s ease;
+    color: white;
+}
+.icon-bar a:hover {
+    background-color: #92B8FF;
+}
+.logo{
+    float: left !important;
+}
+.logo:hover{
+  background-color: #555 !important;
+}
+.menu{
+    background: #3B6DCC;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+}
+.logo img{
+    width: 80%;
+    height: 60px;
+}
+.canvasbtn {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #3766BD;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    position: absolute;
+    left: 30%;
+    bottom: 20%;
+    margin: 5px;
+    width: 40%;
+    opacity: 0.5;
+  }
+  .canvasbtn:hover{
+    opacity: 1;
+    transition: 1s;
+  }
+  #myCanvas{
+    width: 100%;
+    height: 900px;
+    background-image: url("backimage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+ @media only screen and (min-width: 992px) {
+    .one{
+      grid-column: 1/-1;
+      grid-row: 1;
+    }
+    .two{
+        grid-column: 1;
+        grid-row: 2/-2;
+        background: transparent;
+    }
+    .header{
+      grid-column: 2/4;
+      grid-row: 2;
+    }
+    .three{
+        grid-column: 2/4;
+        grid-row: 3;
+        padding: 15px;
+        height: 130px;
+
+    }
+    .three a{
+      height:50px;
+      width: 65px;
+      background-color: #5086c1;
+      padding: 12px;
+
+    }
+    .four{
+        grid-column: 2/4;
+        position: relative;
+        height: 600px;
+    }
+    .five{
+        grid-column: 4;
+        grid-row: 2/-2;
+    }
+    .six{
+        grid-column: 1/-1;
+        grid-row: 7;
+    }
+    #myCanvas{
+      width: 100%;
+      height: 630px;
+      background-image: url("backimage.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }

@@ -1,0 +1,95 @@
+body{
+    width: 99%;
+    text-align: center;
+    background-image: url("back.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    display: grid!important;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, minmax(50px, auto));
+    grid-gap: 5px;
+    grid-template-areas:
+    "one one one one "
+    "two two two two "
+    "three three three three"
+    "four four four four"
+    "five five five five"
+    "six six six six";
+
+}
+.container div{
+    background: #bbb;
+}
+.one{
+    grid-area: one;
+}
+.two{
+    grid-area:two;
+    background: transparent;
+}
+.two img{
+    width: 100%;
+}
+.three{
+    grid-area: three;
+    background-color: #92B8FF !important;
+
+}
+.four{
+    grid-area: four;
+    background: #92B8FF !important;
+}
+.canvasbtn{
+    padding: 20px;
+    width: 30%;
+    align-self: center;
+    color: white;
+    font-size: 20px;
+}
+.five{
+    grid-area: five;
+}
+.five img{
+    width: 100%;
+}
+.six{
+    grid-area: six;
+}
+*{
+    display: box;
+}
+.icon-bar {
+    width: 100%;
+    background-color: #555 !important;
+    overflow: auto;
+}
+.icon-bar a {
+    float: right;
+    width: 30%;
+    height: 110px;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.9s ease;
+    color: white;
+    font-size: 70px;
+}
+.icon-bar a:hover {
+    background-color: #92B8FF;
+}
+.logo{
+    float: left !important;
+}
+.menu{
+    padding-top: 40px !important;
+    background: #3B6DCC
+}
+.logo:hover{
+    background: #555 !important;
+}
+.logo img{
+    width: 80%;
+    height: 100px;
+    padding-top: 20px;
+}
