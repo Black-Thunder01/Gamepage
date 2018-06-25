@@ -9,7 +9,6 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, minmax(30px, auto));
-    grid-gap: 5px;
     grid-template-areas:
     "one one one one "
     "two two two two "
@@ -18,11 +17,6 @@ body{
     "four four four four"
     "five five five five"
     "six six six six";
-    height:100%;
-}
-
-*{
-
 }
 .container div{
     background: #bbb;
@@ -32,11 +26,12 @@ body{
     grid-area: one;
 }
 .two{
-    grid-area:two;
-    background: transparent;
-}
-.two img{
-    width: 100%;
+    grid-area: two;
+    background-image: url("banner2.jpg")!important;
+    height: 270px;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .three{
     grid-area: three;
@@ -50,9 +45,11 @@ body{
 }
 .five{
     grid-area: five;
-}
-.five img{
-    width: 100%;
+    background: url("afew.jpg") !important;
+    height: 225px;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .six{
     grid-area: six;
@@ -136,14 +133,20 @@ body{
     background-size: cover;
   }
  @media only screen and (min-width: 992px) {
+   .container{
+     height: 100%;
+   }
     .one{
       grid-column: 1/-1;
       grid-row: 1;
     }
-    .two{
+    #two{
         grid-column: 1;
         grid-row: 2/-2;
-        background: transparent;
+        background-image: url("pot1.gif") !important;
+        background-position: center;
+        background-size: cover !important;
+        height: 950px;
     }
     .header{
       grid-column: 2/4;
@@ -153,28 +156,37 @@ body{
         grid-column: 2/4;
         grid-row: 3;
         padding: 15px;
-        height: 130px;
+        height: 120px;
 
     }
     .three a{
+      cursor: pointer;
       height:50px;
-      width: 65px;
+      width: 90px;
       background-color: #5086c1;
       padding: 12px;
+      color: white;
+      font-weight: bold;
+      font-style: italic;
 
     }
     .four{
         grid-column: 2/4;
         position: relative;
-        height: 600px;
+        height: 599px;
     }
     .five{
         grid-column: 4;
         grid-row: 2/-2;
+        background-image: url("pot2.gif") !important;
+        background-size: cover !important;
+        background-position: center;
+        height: 950px;
     }
     .six{
         grid-column: 1/-1;
         grid-row: 7;
+        padding: 15px 0;
     }
     #myCanvas{
       width: 100%;
