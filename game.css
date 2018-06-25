@@ -6,6 +6,8 @@ body{
     background-size: cover;
 }
 .container{
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, minmax(30px, auto));
@@ -118,12 +120,9 @@ body{
     bottom: 20%;
     margin: 5px;
     width: 40%;
-    opacity: 0.5;
-  }
-  .canvasbtn:hover{
     opacity: 1;
-    transition: 1s;
   }
+
   #myCanvas{
     width: 100%;
     height: 900px;
@@ -134,10 +133,15 @@ body{
   }
  @media only screen and (min-width: 992px) {
    .canvasbtn{
+     opacity: 0.6;
+   }
+   .canvasbtn:hover{
      opacity: 1;
+     transition: 1s;
    }
    .container{
      height: 100%;
+     width: 100%;
    }
     .one{
       grid-column: 1/-1;
